@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HNav from './components/HNav';
 import HFooter from './components/HFooter';
@@ -28,7 +28,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <HNav />
-        <HCats />
+        <Switch>
+          <Route path='/' component={HCats} />
+        </Switch>
         <HFooter />
       </div>
     </BrowserRouter>
