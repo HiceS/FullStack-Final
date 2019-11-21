@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.Emphasis {
+  color: #ff79c6;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.App-body {
+  background-color: #282a36;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // this is neat i like it
+  font-size: calc(10px + 2vmin);
+  color: #bd93f9;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+a{
+  color: #d7befb;
+  transition: 0.5s;
+}
+a:hover{
+  color: #ff79c6;
+  text-decoration: none;
+}
+
+.App-link {
+  color: #bd93f9;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track { // set style to track
+  background : #282a36;
+}
+
+::-webkit-scrollbar-thumb { // sets style to thumb
+  background : #bd93f9;
+  box-shadow:  0 6 6px rgba(0, 0, 0, 0.5);
+}

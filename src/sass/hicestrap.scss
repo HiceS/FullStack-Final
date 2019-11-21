@@ -1,0 +1,15 @@
+$body-bg: #282a36;
+
+$theme-colors: (
+  "primary": #282a36,
+  "danger": #ff5555,
+  "dark": #282a36,
+  "secondary": #bd93f9,
+  "info": #ff79c6,
+  "warning": #f1fa8c
+);
+
+$jumbotron-bg: #282a36;
+$card-bg: #ff5555;
+
+@import '~bootstrap/scss/bootstrap.scss';
