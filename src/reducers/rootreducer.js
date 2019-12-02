@@ -11,6 +11,8 @@ const rootreducer = combineReducers({
 
 export default rootreducer;
 
+
+// changed this because it was over complicating things
 /**
  * Basic item layout
  * Each DB has a verison number that is a date that corresponds to the most up to date database
@@ -24,6 +26,7 @@ export default rootreducer;
  * - Item []
  * Each Item can contain
  * - UID for routing
+ * - name
  * - Price
  * - Information
  * - Photos []

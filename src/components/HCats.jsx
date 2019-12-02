@@ -34,7 +34,7 @@ class HCats extends React.Component {
 const mapStateToProps = (state, ownProps) => {
     //let id = ownProps.match.params.cat_name;
     return {
-        categories: state.categories
+        categories: state.categories.categories
     }
 }
 
