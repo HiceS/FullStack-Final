@@ -28,9 +28,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <HNav />
-        <Switch>
-          <Route path='/' component={HCats} />
-        </Switch>
+        <Route path='/home' component={HCats} />
         <HFooter />
       </div>
     </BrowserRouter>

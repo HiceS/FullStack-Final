@@ -1,7 +1,6 @@
 import React from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 
-// After hours of messing with this I have deemed it ridiculous to deal with routing and gh-pages so no routing internally
 function HNav () {
     return(
         <Navbar className="header-container" fixed="top" expand="lg" variant="dark" bg="dark">

@@ -5,25 +5,18 @@ import './sass/hicestrap.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
-
-const initState = {
-    todos: [],
-    posts: []
-}
-
-// https://www.youtube.com/watch?v=w3okdbomqxo
-function mainReducer(state = initState, action){
-
-}
+import { Provider } from 'react-redux';
+import rootreducer from './reducers/rootreducer';
 
 // create many reducers and combine reducers to pass into store
 // a reducer for checkout
 // a reducer for interaction etc...
-const store = createStore(mainReducer);
+// never edit the state
+const store = createStore(rootreducer);
 
 // After hours of messing with this I have deemed it ridiculous to deal with routing and gh-pages so no routing internally
 ReactDOM.render(
-    <App />,
+    <Provider store={store}><App /></Provider>,
     document.getElementById('root')
 );
 
