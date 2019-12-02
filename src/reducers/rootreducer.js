@@ -5,8 +5,19 @@ const initState = {
             name: "hellotest",
             body: "asdasdasdasdasd"
         },
+        {
+            id: 1,
+            name: "hello",
+            body: "asdasdasdasdasd"
+        },
+        {
+            id: 1,
+            name: "mackenna",
+            body: "asdasdasdasdasd"
+        },
     ],
-    items: []
+    items: [],
+    cart: []
 }
 
 const rootreducer = (state = initState, action) => {

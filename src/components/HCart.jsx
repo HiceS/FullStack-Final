@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../sass/Component.scss';
 
-class HCats extends React.Component {
+class HCart extends React.Component {
     componentDidMount(){
         // grab the database stuff
         // use async and .then()
@@ -38,4 +38,8 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(HCats);
+const mapDispatchToProps = (dispatch) => {
+    
+}
+
+export default connect(mapStateToProps)(HCart);
