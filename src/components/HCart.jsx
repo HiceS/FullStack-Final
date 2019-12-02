@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { refreshCategory } from './../actions/categoryActions';
 import '../sass/Component.scss';
 
 class HCart extends React.Component {
@@ -39,7 +40,11 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    
+    return {
+        refreshCategories: () => {
+            dispatch(refreshCategory())
+        }
+    }
 }
 
 export default connect(mapStateToProps)(HCart);
