@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './sass/index.scss';
-import './sass/hicestrap.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -11,6 +9,10 @@ import thunk from 'redux-thunk';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig';
+
+// Styling
+import './sass/index.scss';
+import './sass/hicestrap.scss';
 
 // create many reducers and combine reducers to pass into store
 // a reducer for checkout
