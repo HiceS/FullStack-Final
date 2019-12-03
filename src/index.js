@@ -13,11 +13,13 @@ import fbConfig from './config/fbConfig';
 // Styling
 import './sass/index.scss';
 import './sass/hicestrap.scss';
+import projectReducer from './reducers/projectreducer';
 
 // create many reducers and combine reducers to pass into store
 // a reducer for checkout
 // a reducer for interaction etc...
 // never edit the state
+/**
 const store = createStore(rootreducer, 
     compose(
         applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
@@ -25,6 +27,9 @@ const store = createStore(rootreducer,
         reactReduxFirebase(fbConfig)
     )
 );
+*/
+
+const store = createStore(rootreducer, projectReducer);
 
 //https://www.youtube.com/watch?v=JA1Z0u4dr0E&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=18
 
