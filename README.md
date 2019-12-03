@@ -1,10 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is temporarily named **Harnec Web App**,
+
+It provides the following functionality:
+
+1. Reads JSON file and populates a switch that contains categories and items.
+2. Uses Redux to add component to a cart object that gets stored to a databse on purchase to review purchase.
+3. Uses react-Bootstrap for styling
+4. Runs on Firebase using Firestore for the NoSQL DB
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start` or `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +19,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn test` or `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `yarn build`
+### `yarn build` or `npm build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -25,44 +31,68 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Data
 
-### `yarn eject`
+### Category and Project Data
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+          {
+            "version": "2019-12-02T22:43:23.573Z",
+            "categories": [
+              {
+                "id": 12345345123123124,
+                "name": "thing number 1",
+                "description": "pretty okay stuff",
+                "photo": "www.facebook.com",
+                "items": [
+                  {
+                    "id": 216745,
+                    "name": "good stuff1",
+                    "price": 123,
+                    "info": "pretty good shape",
+                    "photos": [
+                      "www.google.com",
+                      "www.imgur.com"
+                    ]
+                  },
+                  {
+                    "id": 216745,
+                    "name": "good stuff1",
+                    "price": 123,
+                    "info": "pretty good shape",
+                    "photos": [
+                      "www.google.com",
+                      "www.imgur.com"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12312312312312334,
+                "name": "thing number 2",
+                "description": "much better stuff",
+                "photo": "www.facebook.com",
+                "items": [
+                  {
+                    "id": 216745,
+                    "name": "good stuff1",
+                    "price": 123,
+                    "info": "pretty good shape",
+                    "photos": [
+                      "www.google.com",
+                      "www.imgur.com"
+                    ]
+                  },
+                  {
+                    "id": 216745,
+                    "name": "good stuff1",
+                    "price": 123,
+                    "info": "pretty good shape",
+                    "photos": [
+                      "www.google.com",
+                      "www.imgur.com"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
