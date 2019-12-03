@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
+import { Elements, StripeProvider } from 'react-stripe-elements';
 import HNav from './components/HNav';
 import HFooter from './components/HFooter';
 import HCats from './components/HCats';
@@ -23,14 +23,18 @@ import './sass/App.scss';
  *  - item object with associated price and stripe ID for payment
  */
 
+
+// it's okay to publish the public test-key, the private key will be stored on the secondary server.
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <HNav />
-        <Route path='/' component={HCats} />
-        <HFooter />
-      </div>
+      <StripeProvider apiKey="pk_test_z3bOiiGJzZPX9UdDuULmZqb0008tuOiMY4">
+        <div className="App">
+          <HNav />
+          <Route path='/' component={HCats} />
+          <HFooter />
+        </div>
+      </StripeProvider>
     </BrowserRouter>
   );
 }
