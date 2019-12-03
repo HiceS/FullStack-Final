@@ -11,6 +11,8 @@ class HCats extends React.Component {
         // get iterms in render
     }
 
+    // This will make a list of cards that act as buttons to change the route to a specific category:id which will give a similiar page with HItems 
+
     render(){
         const categories = this.props.categories;
         const categoriesList = categories.length ? (
@@ -34,7 +36,7 @@ class HCats extends React.Component {
 const mapStateToProps = (state, ownProps) => {
     //let id = ownProps.match.params.cat_name;
     return {
-        categories: state.categories.categories
+        categories: state.project.categories
     }
 }
 

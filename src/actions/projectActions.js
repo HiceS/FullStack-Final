@@ -17,3 +17,10 @@ export const refreshCategory = () => {
         type: "REFRESH_CATEGORY"
     }
 }
+
+export const createProject = (project) => {
+    return (dispatch, getState) => {
+        // async call here with thunk
+        dispatch({ type: 'CREATE_PROJECT', project: project});
+    }
+}

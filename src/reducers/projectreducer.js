@@ -60,8 +60,8 @@ const initState = {
     ]
   } 
 
-const categoriesReducer = (state = initState, action) => {
+const projectReducer = (state = initState, action) => {
     return state;
 }
 
-export default categoriesReducer;
+export default projectReducer;
