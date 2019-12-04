@@ -1,5 +1,77 @@
+@import './hicestrap.scss';
+
 .component {
     position: absolute;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+button:focus, button:active{
+    outline: none;
+}
+
+.btn:focus, .btn:active {
+    outline: none;
+}
+
+.container {
+    margin: 0px;
+    max-width: 100vw;
+}
+
+.row {
+    margin: 10px;
+}
+
+.category {
+    width: 100%;
+    transition: 0.5s;
+    margin: 10px;
+    background-color: rgba(map-get($theme-colors, ('secondary')), .4);
+
+    // kinda want them all to be random colors
+    /*
+    &:nth-child(){
+        background-color: rgb(random(255),random(255),random(255));
+    }
+    */
+
+    // to get better viewing on mutltiple screens
+
+    font-size: 25px;
+    font-weight: bold;
+
+    @media (min-width: 800px) {
+        font-size: 30px;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    }  
+    @media (min-width: 1200px) {
+        font-size: 40px;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.category:hover{
+    background-color: map-get($theme-colors, ('info'));
+    text-decoration: none;
+}
+
+.category:active{
+    outline-color: lighten(map-get($theme-colors, ('info')), 10%);
+}
+
+.category:focus{
+    outline: none;
+    background-color: lighten(map-get($theme-colors, ('info')), 5%);
+}
+
+.screen-center {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

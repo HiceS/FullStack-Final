@@ -8,8 +8,6 @@ function HFooter() {
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
                         Created with <span role="img" aria-label="Purple Heart">💜</span> by Shawn Hice
-                        <br />
-                        &copy; Harnec LLC
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>

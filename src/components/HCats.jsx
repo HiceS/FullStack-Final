@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import '../sass/Component.scss';
+import { Container, Row } from 'react-bootstrap';
 
 class HCats extends React.Component {
     componentDidMount(){
@@ -18,7 +19,9 @@ class HCats extends React.Component {
         const categoriesList = categories.length ? (
             categories.map(category => {
                 return(
-                    <div key={category.id}>{category.name}</div>
+                    <Row key={category.id}>    
+                        <button className="category">{category.name}</button>
+                    </Row>
                 )
             })
         ) : (
@@ -26,8 +29,10 @@ class HCats extends React.Component {
         )
        console.log(this.props);
         return (
-            <div className="component Emphasis">
-                {categoriesList}
+            <div className="component Emphasis screen-center">
+                <Container>
+                    {categoriesList}
+                </Container>
             </div>
         )
     }

@@ -3,7 +3,7 @@ const initState = {
     "categories": [
       {
         "id": 12345345123123124,
-        "name": "thing number 1",
+        "name": "BMW Parts",
         "description": "pretty okay stuff",
         "photo": "www.facebook.com",
         "items": [
@@ -31,7 +31,7 @@ const initState = {
       },
       {
         "id": 12312312312312334,
-        "name": "thing number 2",
+        "name": "Other stuff",
         "description": "much better stuff",
         "photo": "www.facebook.com",
         "items": [

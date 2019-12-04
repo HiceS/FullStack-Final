@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 import rootreducer from './reducers/rootreducer';
 import thunk from 'redux-thunk';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
-import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
-import fbConfig from './config/fbConfig';
+import { reactReduxFirebase, getFirebase, ReactReduxFirebaseProvider, fire } from 'react-redux-firebase';
+import firebase from './config/fbConfig';
 
 // Styling
 import './sass/index.scss';
@@ -19,17 +19,15 @@ import projectReducer from './reducers/projectreducer';
 // a reducer for checkout
 // a reducer for interaction etc...
 // never edit the state
-/**
+
 const store = createStore(rootreducer, 
     compose(
         applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
-        reduxFirestore(fbConfig),
-        reactReduxFirebase(fbConfig)
+        reduxFirestore(firebase),
+        reactReduxFirebase(firebase)
     )
 );
-*/
-
-const store = createStore(rootreducer, projectReducer);
+//const store = createStore(rootreducer, projectReducer);
 
 //https://www.youtube.com/watch?v=JA1Z0u4dr0E&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=18
 
