@@ -20,12 +20,16 @@ class HCats extends React.Component {
             categories.map(category => {
                 return(
                     <Row key={category.id}>
-                        <Link to={'/category/' + category.name}>
+                        <Link to={{
+                            pathname: '/category/' + category.name,
+                            state: {
+                                category: category
+                            }}}>
                             <div className="category">
                                 <button onClick={ () => {
                                     console.log("Selected: " + category);
                                 }}>
-                                <img  className="screen-center" src={category.photo}></img>
+                                <img  className="screen-center" alt="" src={category.photo}></img>
                                 <div className="text screen-center" >{category.name}</div>
                                 </button>
                             </div>
@@ -36,7 +40,6 @@ class HCats extends React.Component {
         ) : (
             <div>No data is loaded yet</div>
         )
-       console.log(this.props);
         return (
             <div className="component screen-center">
                 <Container>

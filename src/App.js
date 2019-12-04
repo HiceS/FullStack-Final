@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { AnimatedSwitch } from 'react-router-transition';
 import { StripeProvider } from 'react-stripe-elements';
 import HNav from './components/HNav';
 import HFooter from './components/HFooter';
@@ -33,12 +34,17 @@ function App() {
       <StripeProvider apiKey="pk_test_z3bOiiGJzZPX9UdDuULmZqb0008tuOiMY4">
         <div className="App">
           <HNav />
-          <Switch>
+          <AnimatedSwitch 
+                atEnter={{ opacity: 0 }}
+                atLeave={{ opacity: 0 }}
+                atActive={{ opacity: 1 }}
+                className="switch-wrapper"
+            >
             <Route exact path='/' component={HCats} />
             <Route path='/categories' component={HCats} />
             <Route path='/category/:category' component={HItems} />
             <Route path='/item/:item' component={HItem} />
-          </Switch>
+          </AnimatedSwitch>
           <HFooter />
         </div>
       </StripeProvider>
