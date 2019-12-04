@@ -1,26 +1,39 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import '../sass/Component.scss';
+import React from 'react';
 
-const HItems = ({items}) => {
+class HItems extends Component {
+    state = {
+        items: []
+    }
+
+    componentDidMount(){
+        let id = this.props.match.params.category;
+    }
     // This will be a list of cards representing items that will be able to be clicked on to route the page to a Hitem which will have the ability to add to cart
     // There will also be the ability to add to cart from this page for fast shopping
-    return (
-        <div>
-            item that will be replaced by nested map function over category items
-            {
-                items && items.map(item => {
-                    return (
-                        <div>item.name</div>
-                    )
-                })
-            }
-        </div>
-    )
+    render(){
+        return (
+            <div>
+                Hellow
+            </div>
+        )
+    }
 }
 
+/*
+               item that will be replaced by nested map function over category items
+                {
+                    this.items && this.items.map(item => {
+                        return (
+                            <div>item.name</div>
+                        )
+                    })
+                }
+*/
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     //let id = ownProps.match.params.cat_name;
     return {
         categories: state.project.items
@@ -29,10 +42,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addItemToCart: (id) => {
+        addItemToCart: (id, quantity) => {
             dispatch({type: 'ADD_CART', id: id, quantity: quantity})
         }
     }
 }
 
-export default connect(mapDispatchToProps)(HItems);
+export default connect(mapStateToProps)(HItems);

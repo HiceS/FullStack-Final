@@ -7,13 +7,12 @@ import { Provider } from 'react-redux';
 import rootreducer from './reducers/rootreducer';
 import thunk from 'redux-thunk';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
-import { reactReduxFirebase, getFirebase, ReactReduxFirebaseProvider, fire } from 'react-redux-firebase';
+import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import firebase from './config/fbConfig';
 
 // Styling
 import './sass/index.scss';
 import './sass/hicestrap.scss';
-import projectReducer from './reducers/projectreducer';
 
 // create many reducers and combine reducers to pass into store
 // a reducer for checkout

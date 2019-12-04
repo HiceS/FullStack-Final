@@ -21,7 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addItemToCart: (id) => {
+        addItemToCart: (id, quantity) => {
             dispatch({type: 'ADD_CART', id: id, quantity: quantity})
         }
     }

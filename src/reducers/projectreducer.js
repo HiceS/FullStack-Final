@@ -5,7 +5,7 @@ const initState = {
         "id": 12345345123123124,
         "name": "BMW Parts",
         "description": "pretty okay stuff",
-        "photo": "www.facebook.com",
+        "photo": "https://cdn.motor1.com/images/mgl/vEJmQ/s1/bmw-i8-m-rendering.jpg",
         "items": [
           {
             "id": 216745,
@@ -33,7 +33,7 @@ const initState = {
         "id": 12312312312312334,
         "name": "Other stuff",
         "description": "much better stuff",
-        "photo": "www.facebook.com",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Arduino_ftdi_chip-1.jpg",
         "items": [
           {
             "id": 216745,

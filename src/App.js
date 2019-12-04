@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Elements, StripeProvider } from 'react-stripe-elements';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { StripeProvider } from 'react-stripe-elements';
 import HNav from './components/HNav';
 import HFooter from './components/HFooter';
 import HCats from './components/HCats';
+import HItems from './components/HItems';
+import HItem from './components/HItem';
 
 import './sass/App.scss';
 
@@ -31,7 +33,12 @@ function App() {
       <StripeProvider apiKey="pk_test_z3bOiiGJzZPX9UdDuULmZqb0008tuOiMY4">
         <div className="App">
           <HNav />
-          <Route path='/' component={HCats} />
+          <Switch>
+            <Route exact path='/' component={HCats} />
+            <Route path='/categories' component={HCats} />
+            <Route path='/category/:category' component={HItems} />
+            <Route path='/item/:item' component={HItem} />
+          </Switch>
           <HFooter />
         </div>
       </StripeProvider>
