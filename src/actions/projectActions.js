@@ -18,9 +18,30 @@ export const refreshCategory = () => {
     }
 }
 
+export const refreshProject = () => {
+    return dispatch => {
+        return fetch("https://raw.githubusercontent.com/HiceS/FullStack-Final/master/src/dataSample.json")
+          .then(handleErrors)
+          .then(res => res.json())
+          .then(json => {
+            dispatch(createProject(json.products));
+            return json.products;
+          })
+          .catch(error => {console.log("Error Cannot refresh")});
+    };
+}
+
+function handleErrors(response) {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response;
+}
+
 export const createProject = (project) => {
-    return (dispatch, getState) => {
-        // async call here with thunk
-        dispatch({ type: 'CREATE_PROJECT', project: project});
+    console.log(project);
+    return {
+        type: "CREATE_PROJECT",
+        project: project
     }
 }

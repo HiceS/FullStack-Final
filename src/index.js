@@ -26,6 +26,7 @@ const store = createStore(rootreducer,
         reactReduxFirebase(firebase)
     )
 );
+//store.dispatch()
 //const store = createStore(rootreducer, projectReducer);
 
 //https://www.youtube.com/watch?v=JA1Z0u4dr0E&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=18
