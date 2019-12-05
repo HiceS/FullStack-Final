@@ -22,7 +22,9 @@ class HCats extends Component {
     // This will make a list of cards that act as buttons to change the route to a specific category:id which will give a similiar page with HItems 
     // eventhandler.bind seems to have a bug so I won't be using it
     renderCats = data => {
+        console.log(this.state.project);
         const categories = this.state.project.categories;
+        console.log(categories);
         const categoriesList = categories.length ? (
             categories.map(category => {
                 return(
