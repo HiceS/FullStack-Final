@@ -14,7 +14,7 @@ const initState = {
             "info": "pretty good shape",
             "photos": [
               "https://cdn11.bigcommerce.com/s-e0b3c/images/stencil/1280x1280/products/352/1786/nsrtturbokit__44120.1514823939.jpg?c=2",
-              "www.imgur.com"
+              "https://cdn11.bigcommerce.com/s-e0b3c/images/stencil/1280x1280/products/352/1786/nsrtturbokit__44120.1514823939.jpg?c=2"
             ]
           },
           {

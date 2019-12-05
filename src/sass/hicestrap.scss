@@ -12,4 +12,8 @@ $theme-colors: (
 $jumbotron-bg: #282a36;
 $card-bg: #ff5555;
 
+.navbar {
+  min-height: 6vh;
+}
+
 @import '~bootstrap/scss/bootstrap.scss';

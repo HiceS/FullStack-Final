@@ -4,7 +4,7 @@ import { Navbar, Container } from 'react-bootstrap';
 function HFooter() {
     return (
         <Container className="footer-container">
-            <Navbar expand="lg" variant="dark" bg="dark" sticky="bottom">
+            <Navbar expand="lg" variant="dark" bg="dark" fixed="bottom">
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
                         Created with <span role="img" aria-label="Purple Heart">💜</span> by Shawn Hice

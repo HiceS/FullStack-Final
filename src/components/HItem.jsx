@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
-import '../sass/Component.scss';
-import { Container, Row } from 'react-bootstrap';
+import '../sass/item.scss';
+import { Container, Image, Row, Col } from 'react-bootstrap';
 import React from 'react';
 
 class HItem extends Component {
@@ -15,16 +15,29 @@ class HItem extends Component {
         console.log(item === undefined);
         
         return (
-            <div className="component screen-center">
+            <div className="item">
                 <Container>
                     {item !== undefined ? (
                         <div className="category">
-                            <button onClick={ () => {
-                                console.log("Selected: " + this.props.location.state.item);
-                            }}>
-                            <img  className="screen-center" alt="" src={this.props.location.state.item.photos[0]}></img>
-                            <div className="text screen-center" >{this.props.location.state.item.name}</div>
-                            </button>
+                            <Row>
+                                <div className="text" >
+                                    <h1>
+                                        {this.props.location.state.item.name}
+                                    </h1>
+                                </div>
+                            </Row>
+                            <Row>
+                                {this.props.location.state.item.photos.map(photo =>
+                                    <Col md>   
+                                        <Image
+                                        src={photo}
+                                        alt={photo}
+                                        fluid
+                                        rounded
+                                        />
+                                    </Col> 
+                                )}
+                            </Row>
                         </div>
                     ) : (
                         <div>
@@ -36,6 +49,21 @@ class HItem extends Component {
         );
     }
 }
+
+/**
+ * 
+ *                                 <Carousel>
+                                    {this.props.location.state.item.photos.map(photo =>
+                                        <Carousel.Item>
+                                                <img
+                                                className="d-block w-100"
+                                                src={photo}
+                                                alt={photo}
+                                                />
+                                        </Carousel.Item>
+                                    )}
+                                </Carousel>
+ */
 
 
 const mapStateToProps = (state) => {
