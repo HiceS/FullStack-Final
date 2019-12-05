@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import '../sass/item.scss';
-import { Container, Image, Row, Col } from 'react-bootstrap';
+import { Container, Image, Row, Col, ButtonToolbar, Button } from 'react-bootstrap';
 import React from 'react';
 
 class HItem extends Component {
@@ -24,6 +24,7 @@ class HItem extends Component {
                                     <h1>
                                         {this.props.location.state.item.name}
                                     </h1>
+                                    <hr/>
                                 </div>
                             </Row>
                             <Row>
@@ -38,6 +39,21 @@ class HItem extends Component {
                                     </Col> 
                                 )}
                             </Row>
+                            <Row>
+                                <div className="text" >
+                                    <h3>
+                                        Description: 
+                                    </h3>
+                                    <hr/>
+                                    <br/>
+                                    {this.props.location.state.item.info}
+                                </div>
+                            </Row>
+                            <Row>
+                                <ButtonToolbar className="justify-content-right">
+                                    <Button  className="btn-padded" variant="success">Purchase</Button>
+                                </ButtonToolbar>
+                            </Row>
                         </div>
                     ) : (
                         <div>
@@ -51,18 +67,17 @@ class HItem extends Component {
 }
 
 /**
- * 
- *                                 <Carousel>
-                                    {this.props.location.state.item.photos.map(photo =>
-                                        <Carousel.Item>
-                                                <img
-                                                className="d-block w-100"
-                                                src={photo}
-                                                alt={photo}
-                                                />
-                                        </Carousel.Item>
-                                    )}
-                                </Carousel>
+ <Carousel>
+    {this.props.location.state.item.photos.map(photo =>
+        <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={photo}
+                alt={photo}
+                />
+        </Carousel.Item>
+    )}
+</Carousel>
  */
 
 
