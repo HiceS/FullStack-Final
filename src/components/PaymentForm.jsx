@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
+import './../sass/item.scss';
+import { Container, Image, Row, Col, ButtonToolbar, Button, Form } from 'react-bootstrap';
 
 class CheckoutForm extends Component {
     constructor(props) {
@@ -20,11 +22,29 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <div className="checkout">
-                <p>Would you like to complete the purchase?</p>
-                <CardElement />
-                <button onClick={this.submit}>Purchase</button>
-            </div>
+                <Form>
+                    <div className="checkout">
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control className="form-input" type="email" placeholder="Enter email" />
+                            <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                            </Form.Text>
+                        </Form.Group>
+
+                        <Form.Group controlId="formCardInfo">
+                            <Form.Label>Card Information</Form.Label>
+                            <CardElement />
+                            <Form.Text className="text-muted">
+                            We will not store your card information.
+                            </Form.Text>
+                        </Form.Group>
+
+                        <Button variant="secondary" type="submit">
+                            Submit
+                        </Button>
+                    </div>
+                </Form>
         );
     }
 }

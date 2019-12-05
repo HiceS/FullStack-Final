@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
-import { StripeProvider } from 'react-stripe-elements';
+import { StripeProvider, Elements } from 'react-stripe-elements';
 import HNav from './components/HNav';
 import HFooter from './components/HFooter';
 import HCats from './components/HCats';
 import HItems from './components/HItems';
 import HItem from './components/HItem';
+import PaymentForm from './components/PaymentForm';
 
 import './sass/App.scss';
 
@@ -43,7 +44,11 @@ function App() {
             <Route exact path='/' component={HCats} />
             <Route path='/categories' component={HCats} />
             <Route path='/category/:category' component={HItems} />
-            <Route path='/item/:item' component={HItem} />
+            <Route exact path='/item/:item' component={HItem} />
+            
+            <Elements>
+              <Route exact path='/purchase/:item' component={PaymentForm} />
+            </Elements>
           </AnimatedSwitch>
           <HFooter />
         </div>

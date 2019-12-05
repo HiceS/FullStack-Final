@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import '../sass/item.scss';
+import { Link } from 'react-router-dom';
 import { Container, Image, Row, Col, ButtonToolbar, Button } from 'react-bootstrap';
 import React from 'react';
 
@@ -51,7 +52,13 @@ class HItem extends Component {
                             </Row>
                             <Row>
                                 <ButtonToolbar className="justify-content-right">
-                                    <Button  className="btn-padded" variant="success">Purchase</Button>
+                                     <Link to={{
+                                        pathname: '/purchase/' + item.id,
+                                        state: {
+                                            item: item
+                                        }}}>
+                                        <Button  className="btn-padded" variant="success">Purchase</Button>
+                                    </Link>
                                 </ButtonToolbar>
                             </Row>
                         </div>

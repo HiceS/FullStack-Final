@@ -94,3 +94,20 @@
         }
     }
 }
+
+.checkout {
+    color: lighten(map-get($theme-colors, ('secondary')), 20%);
+    position: absolute;
+    height: 100%;
+    padding-top: 20vh; // 1vh of padding
+    padding-bottom: 7vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+}
+
+input {
+    background-color: lighten(map-get($theme-colors, ('secondary')), 10%);
+    border-color: lighten(map-get($theme-colors, ('secondary')), 15%);
+}
